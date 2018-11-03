@@ -35,10 +35,8 @@ public class EnemyScript : MonoBehaviour
 
         //Makes the robot go to the player, using the navmesh
         agent.SetDestination(player.position);
-        /* if (Vector3.Distance(transform.position, player.position) < range
-       && Time.time - timeLastAttacked > attackRate)*/
+        //if (Vector3.Distance(transform.position, player.position) < range && Time.time - timeLastAttacked > attackRate)
         //The enemy attacks the player when they enter the collider of Hitbox
-
         {
             //Calls the attack function and resets the timeLastAttacked
             timeLastAttacked = Time.time;
