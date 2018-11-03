@@ -60,7 +60,6 @@ public class EnemyScript : MonoBehaviour
     private void attack()
     {
         Debug.Log("Enemy attacked");
-        //Player.TakeDamage(attackDamage);
         Debug.Log(attackDamage);
         
     }
