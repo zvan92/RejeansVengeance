@@ -20,7 +20,8 @@ public class Player : MonoBehaviour {
     {
         timeForDrain = 60;
         health = totalHealth;
-	}
+       
+    }
 
     private void TakeMorphine()
     {
@@ -63,5 +64,6 @@ public class Player : MonoBehaviour {
 	void Update ()
     {
         health += cHealthDrain * Time.deltaTime;
-	}
+        healthBar.fillAmount = health / totalHealth;
+    }
 }
