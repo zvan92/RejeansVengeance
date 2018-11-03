@@ -21,6 +21,11 @@ public class Player : MonoBehaviour {
         timeForDrain = 60;
         health = totalHealth;
 	}
+
+    private void TakeMorphine()
+    {
+
+    }
 	
     public void TakeDamage(int amount)
     {
