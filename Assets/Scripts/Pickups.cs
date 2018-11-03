@@ -15,19 +15,17 @@ public class Pickups : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       if (gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            if (other.CompareTag("Cocaine"))
+            if (gameObject.CompareTag("Cocaine"))
             {
                 player.pickupCocaine();
             }
-            if (other.CompareTag("Bandaid"))
+            if (gameObject.CompareTag("Bandaid"))
             {
                 player.pickupBandaid();
             }
             Destroy(gameObject);
         }
-
     }
-
 }
