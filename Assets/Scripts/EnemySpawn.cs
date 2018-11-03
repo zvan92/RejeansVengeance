@@ -14,7 +14,6 @@ public class EnemySpawn : MonoBehaviour {
         Instantiate(enemy);
         enemy.transform.position = transform.position;
         currentEnemies++;
-        timesSpawned++;
-       
+        timesSpawned++;     
     }
 }
