@@ -7,6 +7,7 @@ public class EnemyScript : MonoBehaviour
 
     public int health;
     public int range;
+    public int attackDamage;
     public float attackRate;
     UnityEngine.AI.NavMeshAgent agent;
     private Transform player;
@@ -16,6 +17,7 @@ public class EnemyScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        
         isDead = false;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -35,17 +37,31 @@ public class EnemyScript : MonoBehaviour
 
         //Makes the robot go to the player, using the navmesh
         agent.SetDestination(player.position);
-        //if (Vector3.Distance(transform.position, player.position) < range && Time.time - timeLastAttacked > attackRate)
-        //The enemy attacks the player when they enter the collider of Hitbox
+
+        
+      
+    }
+  
+    //The enemy attacks the player when they enter the collider of Hitbox
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.GetComponent<Player>() != null && collider.gameObject.tag == "Player")
         {
-            //Calls the attack function and resets the timeLastAttacked
-            timeLastAttacked = Time.time;
-            attack();
+            if (Time.time - timeLastAttacked > attackRate)
+            {
+                timeLastAttacked = Time.time;
+                attack();
+                collider.gameObject.GetComponent<Player>().TakeDamage(attackDamage);
+            }
         }
+       
     }
 
     private void attack()
     {
-        Debug.Log("Fire");
+        Debug.Log("Enemy attacked");
+        //Player.TakeDamage(attackDamage);
+        Debug.Log(attackDamage);
+        
     }
 }
