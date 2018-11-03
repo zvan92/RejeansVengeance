@@ -4,22 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
+
     const float cHealthDrain = -3.0f;
     const float totalHealth = 100;
 
-    public float health;
-    public float healthDrain;
-    public int damage;
-    private int timeForDrain;
-    [SerializeField]
-    private float speed;
+    [SerializeField] private int damage;
+    [SerializeField] private float health;
+    [SerializeField] private float healthDrain;
+    [SerializeField] private Text HealthText;
+    [SerializeField] private Image healthBar;
 
-    public Image healthBar;
+    private float speed;
+    private int timeForDrain;
+
 	// Use this for initialization
 	void Start ()
     {
-        timeForDrain = 60;
-        health = totalHealth;
+       timeForDrain = 60;
+       health = totalHealth;
        
     }
 
@@ -37,7 +39,7 @@ public class Player : MonoBehaviour {
 
     public void pickupCocaine()
     {
-        healthDrain = healthDrain = 2;
+        healthDrain = cHealthDrain;
         damage = damage * 2;
     }
 
@@ -65,5 +67,6 @@ public class Player : MonoBehaviour {
     {
         health += cHealthDrain * Time.deltaTime;
         healthBar.fillAmount = health / totalHealth;
+        HealthText.text = health.ToString("F");
     }
 }
