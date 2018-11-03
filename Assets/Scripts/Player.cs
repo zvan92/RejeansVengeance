@@ -13,6 +13,11 @@ public class Player : MonoBehaviour {
     {
         timeForDrain = 60;	
 	}
+
+    private void TakeMorphine()
+    {
+
+    }
 	
     private void TakeDamage(int amount)
     {
