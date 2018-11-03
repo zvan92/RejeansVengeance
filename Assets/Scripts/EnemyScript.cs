@@ -41,9 +41,8 @@ public class EnemyScript : MonoBehaviour
         
       
     }
-  
     //The enemy attacks the player when they enter the collider of Hitbox
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.GetComponent<Player>() != null && collider.gameObject.tag == "Player")
         {
@@ -54,7 +53,6 @@ public class EnemyScript : MonoBehaviour
                 collider.gameObject.GetComponent<Player>().TakeDamage(attackDamage);
             }
         }
-       
     }
 
     private void attack()
