@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour
     private Transform player;
     private float timeLastAttacked;
     private bool isDead;
+    public EnemySpawn spawn;
 
     // Use this for initialization
     void Start()
@@ -37,10 +38,7 @@ public class EnemyScript : MonoBehaviour
 
         //Makes the robot go to the player, using the navmesh
         agent.SetDestination(player.position);
-
-        
-      
-    }
+     }
     //The enemy attacks the player when they enter the collider of Hitbox
     private void OnTriggerStay(Collider collider)
     {
@@ -60,5 +58,20 @@ public class EnemyScript : MonoBehaviour
         Debug.Log("Enemy attacked");
         Debug.Log(attackDamage);
         
+    }
+
+    public void Punched(int amount)
+    {
+        health -= amount;
+        if (health < 0)
+        {
+            Die();
+            spawn.currentEnemies--;
+        }
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }
