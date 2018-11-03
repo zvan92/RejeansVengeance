@@ -3,23 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class NewBehaviourScript : MonoBehaviour {
+public class Pickups : MonoBehaviour
+{
+    private Player player;
+    
+    // finds player on instantiation
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
 
-    public Player player;
-	// Use this for initialization
-	
     private void OnTriggerEnter(Collider other)
     {
-       
-        if (CompareTag("Cocaine"))
+       if (gameObject.CompareTag("Player"))
         {
-            player.pickupCocaine();
+            if (other.CompareTag("Cocaine"))
+            {
+                player.pickupCocaine();
+            }
+            if (other.CompareTag("Bandaid"))
+            {
+                player.pickupBandaid();
+            }
+            Destroy(gameObject);
         }
-        if (CompareTag("Bandaid"))
-        {
-            player.pickupBandaid();
-        }
-        Destroy(gameObject);
+
     }
 
 }
