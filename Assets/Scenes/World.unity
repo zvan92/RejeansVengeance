@@ -1194,73 +1194,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114599652973139818, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: attackDamage
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114599652973139818, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: attackRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114599652973139818, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: range
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983266717213528, guid: 47bffb91dad30f841b8b755a00df1509, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4769421506961298, guid: 47bffb91dad30f841b8b755a00df1509, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983266717213528, guid: 47bffb91dad30f841b8b755a00df1509, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 65230192951024220, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 65230192951024220, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65230192951024220, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 65230192951024220, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 65230192951024220, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 54704028646023082, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 195602256066569738, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: m_StoppingDistance
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 54704028646023082, guid: 47bffb91dad30f841b8b755a00df1509,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47bffb91dad30f841b8b755a00df1509, type: 2}
   m_IsPrefabAsset: 0
@@ -1758,7 +1691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc9563f0b9c0e544b79e592a7a61b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  lightDamage: 20
+  heavyDamage: 40
   health: 100
   healthDrain: 0
   HealthText: {fileID: 1101621228}
