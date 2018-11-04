@@ -1060,7 +1060,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc9563f0b9c0e544b79e592a7a61b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  lightDamage: 0
+  heavyDamage: 0
+  enemy: {fileID: 0}
   health: 0
   healthDrain: 0
   HealthText: {fileID: 609650584}
@@ -1425,7 +1427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1056417203
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1666,7 +1668,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Morphine: 0'
+  m_Text: 'Morphine: 1'
 --- !u!222 &1266049345
 CanvasRenderer:
   m_ObjectHideFlags: 0
