@@ -14,6 +14,7 @@ public class EnemyScript : MonoBehaviour
     private float timeLastAttacked;
     private bool isDead;
     private EnemySpawn spawn;
+    private Player heal;
 
     // Use this for initialization
     void Start()
@@ -23,7 +24,7 @@ public class EnemyScript : MonoBehaviour
         isDead = false;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        heal = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -74,7 +75,8 @@ public class EnemyScript : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+        heal.AddHealth();
         spawn.EnemyKilled();
-        //spawn.currentEnemies--;
+        
     }
 }
