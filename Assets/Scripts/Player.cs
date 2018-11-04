@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private Image healthBar;
 
     private float speed;
-    private int morphine = 1;
+    private int morphine;
 	// Use this for initialization
 	void Start ()
     {
@@ -28,18 +28,17 @@ public class Player : MonoBehaviour {
         
     }
 
+    public void AddHealth()
+    {
+        health += 10.0f;
+    }
+
     private void TakeMorphine()
     {
         //there is a input.keydown == m in the update funtcion of the same script
-         if (morphine > 0)
-        {
-            morphine--;
-            health = health + 30;
-        }
-        
+        morphine = 0;
         MorphineText.text = "morphine: " + morphine;
         Debug.Log("Mighty Morphine Power Rangers!");
-
         // Whatever else it does
     }
 
@@ -99,7 +98,6 @@ public class Player : MonoBehaviour {
                 //calls the punched function to the enemy to apply the damage
                 enemy = ray.collider.gameObject;
                 enemy.GetComponent<EnemyScript>().Punched(lightDamage);
-                Debug.Log(lightDamage);
             }
         }
 
@@ -113,12 +111,11 @@ public class Player : MonoBehaviour {
                 //calls the punched function to the enemy to apply the damage
                 enemy = ray.collider.gameObject;
                 enemy.GetComponent<EnemyScript>().Punched(heavyDamage);
-                Debug.Log(heavyDamage);
             }
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             TakeMorphine();
         }
