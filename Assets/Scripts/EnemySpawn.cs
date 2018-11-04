@@ -16,4 +16,12 @@ public class EnemySpawn : MonoBehaviour {
         currentEnemies++;
         timesSpawned++;     
     }
+
+    private void Update()
+    {
+        if (currentEnemies < maxEnemies) 
+        {
+            SpawnEnemy();
+        }
+    }
 }
