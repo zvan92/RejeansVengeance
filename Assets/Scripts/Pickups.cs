@@ -13,7 +13,7 @@ public class Pickups : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        pickupActivatedText = GameObject.FindGameObjectWithTag("PickupActivatedText").GetComponent<Text>();
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,12 +23,12 @@ public class Pickups : MonoBehaviour
             if (gameObject.CompareTag("Cocaine"))
             {
                 player.pickupCocaine();
-                pickupActivatedText.text = "Cocaine picked up";
+            
             }
             if (gameObject.CompareTag("Bandaid"))
             {
                 player.pickupBandaid();
-                pickupActivatedText.text = "Bandaid picked up";
+               
             }
             Destroy(gameObject);
         }
