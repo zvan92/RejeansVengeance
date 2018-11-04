@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: 2a39b49f64cbfa04285568c3fd00ebb3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Enemy_Rig_Final:Bones
+    100004: Enemy_Rig_Final:Enemy
+    100006: Enemy_Rig_Final:group1
+    100008: Enemy_Rig_Final:group2
+    100010: Enemy_Rig_Final:group3
+    100012: Enemy_Rig_Final:group4
+    100014: Enemy_Rig_Final:joint1
+    100016: Enemy_Rig_Final:joint10
+    100018: Enemy_Rig_Final:joint11
+    100020: Enemy_Rig_Final:joint11 1
+    100022: Enemy_Rig_Final:joint12
+    100024: Enemy_Rig_Final:joint13
+    100026: Enemy_Rig_Final:joint14
+    100028: Enemy_Rig_Final:joint15
+    100030: Enemy_Rig_Final:joint16
+    100032: Enemy_Rig_Final:joint17
+    100034: Enemy_Rig_Final:joint18
+    100036: Enemy_Rig_Final:joint19
+    100038: Enemy_Rig_Final:joint2
+    100040: Enemy_Rig_Final:joint20
+    100042: Enemy_Rig_Final:joint21
+    100044: Enemy_Rig_Final:joint22
+    100046: Enemy_Rig_Final:joint23
+    100048: Enemy_Rig_Final:joint24
+    100050: Enemy_Rig_Final:joint25
+    100052: Enemy_Rig_Final:joint26
+    100054: Enemy_Rig_Final:joint27
+    100056: Enemy_Rig_Final:joint28
+    100058: Enemy_Rig_Final:joint29
+    100060: Enemy_Rig_Final:joint3
+    100062: Enemy_Rig_Final:joint30
+    100064: Enemy_Rig_Final:joint4
+    100066: Enemy_Rig_Final:joint5
+    100068: Enemy_Rig_Final:joint6
+    100070: Enemy_Rig_Final:joint7
+    100072: Enemy_Rig_Final:joint8
+    100074: Enemy_Rig_Final:joint9
+    400000: //RootNode
+    400002: Enemy_Rig_Final:Bones
+    400004: Enemy_Rig_Final:Enemy
+    400006: Enemy_Rig_Final:group1
+    400008: Enemy_Rig_Final:group2
+    400010: Enemy_Rig_Final:group3
+    400012: Enemy_Rig_Final:group4
+    400014: Enemy_Rig_Final:joint1
+    400016: Enemy_Rig_Final:joint10
+    400018: Enemy_Rig_Final:joint11
+    400020: Enemy_Rig_Final:joint11 1
+    400022: Enemy_Rig_Final:joint12
+    400024: Enemy_Rig_Final:joint13
+    400026: Enemy_Rig_Final:joint14
+    400028: Enemy_Rig_Final:joint15
+    400030: Enemy_Rig_Final:joint16
+    400032: Enemy_Rig_Final:joint17
+    400034: Enemy_Rig_Final:joint18
+    400036: Enemy_Rig_Final:joint19
+    400038: Enemy_Rig_Final:joint2
+    400040: Enemy_Rig_Final:joint20
+    400042: Enemy_Rig_Final:joint21
+    400044: Enemy_Rig_Final:joint22
+    400046: Enemy_Rig_Final:joint23
+    400048: Enemy_Rig_Final:joint24
+    400050: Enemy_Rig_Final:joint25
+    400052: Enemy_Rig_Final:joint26
+    400054: Enemy_Rig_Final:joint27
+    400056: Enemy_Rig_Final:joint28
+    400058: Enemy_Rig_Final:joint29
+    400060: Enemy_Rig_Final:joint3
+    400062: Enemy_Rig_Final:joint30
+    400064: Enemy_Rig_Final:joint4
+    400066: Enemy_Rig_Final:joint5
+    400068: Enemy_Rig_Final:joint6
+    400070: Enemy_Rig_Final:joint7
+    400072: Enemy_Rig_Final:joint8
+    400074: Enemy_Rig_Final:joint9
+    2100000: Enemy_Rig_Final_Enemy_SHD
+    4300000: Enemy_Rig_Final:Enemy
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Enemy_Rig_Final:Enemy
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
