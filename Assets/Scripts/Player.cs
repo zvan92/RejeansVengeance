@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
 
     public int lightDamage;
     public int heavyDamage;
-    public EnemyScript enemy;
+    private GameObject enemy;
 
     [SerializeField] private float health;
     [SerializeField] private float healthDrain;
@@ -86,24 +86,26 @@ public class Player : MonoBehaviour {
             Debug.Log("Pressed primary button.");
 
             //draws a raycast and checks if it is range
-            if (Physics.Raycast(transform.position, fwd, 5))
+            RaycastHit ray;
+            //draws a raycast and checks if it is range
+            if (Physics.Raycast(transform.position, fwd, out ray, 3))
             {
                 //calls the punched function to the enemy to apply the damage
-                enemy.Punched(lightDamage);
-                Debug.Log(lightDamage);
+                enemy = ray.collider.gameObject;
+                enemy.GetComponent<EnemyScript>().Punched(lightDamage);
             }
         }
 
         if (Input.GetKey(KeyCode.Mouse1))
         {
             Debug.Log("Pressed secondary button.");
-
+            RaycastHit ray;
             //draws a raycast and checks if it is range
-            if (Physics.Raycast(transform.position, fwd, 3))
+            if (Physics.Raycast(transform.position, fwd, out ray, 3))
             {
                 //calls the punched function to the enemy to apply the damage
-                enemy.Punched(heavyDamage);
-                Debug.Log(heavyDamage);
+                enemy = ray.collider.gameObject;
+                enemy.GetComponent<EnemyScript>().Punched(heavyDamage);
             }
         }
 
