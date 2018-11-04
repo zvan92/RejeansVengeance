@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
     {
         //there is a input.keydown == m in the update funtcion of the same script
         morphine = 0;
-        MorphineText.text = "morphine";
+        MorphineText.text = "morphine: " + morphine;
         Debug.Log("Mighty Morphine Power Rangers!");
         // Whatever else it does
     }
