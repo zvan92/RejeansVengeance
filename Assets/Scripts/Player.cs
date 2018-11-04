@@ -12,24 +12,25 @@ public class Player : MonoBehaviour {
     [SerializeField] private float health;
     [SerializeField] private float healthDrain;
     [SerializeField] private Text HealthText;
+    [SerializeField] private Text MorphineText;
     [SerializeField] private Image healthBar;
 
     private float speed;
-    private int timeForDrain;
-
+    private int morphine;
 	// Use this for initialization
 	void Start ()
     {
-       timeForDrain = 60;
        health = totalHealth;
        
     }
 
     private void TakeMorphine()
     {
-
+        //there is a input.keydown == m in the update funtcion of the same script
+        MorphineText.text = morphine.ToString("Morphine: " + morphine);
+        // Whatever else it does
     }
-	
+
     public void TakeDamage(int amount)
     {
         int playerDamage = amount;
@@ -67,6 +68,11 @@ public class Player : MonoBehaviour {
     {
         health += cHealthDrain * Time.deltaTime;
         healthBar.fillAmount = health / totalHealth;
-        HealthText.text = health.ToString("F");
+        HealthText.text = health.ToString("F");         // if you guys can make it at integer value that'd be great
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            TakeMorphine();
+        }
     }
 }

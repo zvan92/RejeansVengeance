@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
 
-    [SerializeField] private Text uiText;
+    [SerializeField] private Text timerText;
     [SerializeField] private float wavetimer;
 
     private float timer;
@@ -20,13 +20,13 @@ public class Timer : MonoBehaviour {
         if (timer >= 0.0f)
         {
             timer -= Time.deltaTime;
-            uiText.text = timer.ToString("F");
+            timerText.text = timer.ToString("F");
         }
 
         else if (timer <= 0.0f)
         {
             timer = 0.0f;
-            uiText.text = "0.00";
+            timerText.text = "0.00";
             GameOver();
         }
     }
