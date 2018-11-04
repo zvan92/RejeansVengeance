@@ -8,8 +8,10 @@ public class Player : MonoBehaviour {
     const float cHealthDrain = -3.0f;
     const float totalHealth = 100;
 
-    [SerializeField] public int lightDamage;
-    [SerializeField] public int heavyDamage;
+    public int lightDamage;
+    public int heavyDamage;
+    public EnemyScript enemy;
+
     [SerializeField] private float health;
     [SerializeField] private float healthDrain;
     [SerializeField] private Text HealthText;
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour {
     {
        health = totalHealth;
         healthDrain = cHealthDrain;
+        
     }
 
     private void TakeMorphine()
@@ -81,17 +84,27 @@ public class Player : MonoBehaviour {
         if (Input.GetKey(KeyCode.Mouse0))
         {
             Debug.Log("Pressed primary button.");
-            
-            if (Physics.Raycast(transform.position, fwd, 10))
+
+            //draws a raycast and checks if it is range
+            if (Physics.Raycast(transform.position, fwd, 5))
+            {
+                //calls the punched function to the enemy to apply the damage
+                enemy.Punched(lightDamage);
                 Debug.Log(lightDamage);
+            }
         }
 
         if (Input.GetKey(KeyCode.Mouse1))
         {
             Debug.Log("Pressed secondary button.");
 
-            if (Physics.Raycast(transform.position, fwd, 8))
+            //draws a raycast and checks if it is range
+            if (Physics.Raycast(transform.position, fwd, 3))
+            {
+                //calls the punched function to the enemy to apply the damage
+                enemy.Punched(heavyDamage);
                 Debug.Log(heavyDamage);
+            }
         }
 
 
