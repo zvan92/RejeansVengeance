@@ -17,11 +17,23 @@ public class EnemySpawn : MonoBehaviour {
         timesSpawned++;     
     }
 
+    public void EnemyKilled()
+    {
+        currentEnemies--;
+    }
+
     private void Update()
     {
-        if (currentEnemies < maxEnemies) 
+        if (currentEnemies == 0)
         {
-            SpawnEnemy();
+            for (int i = 0; i < 6; i++)
+            {
+                SpawnEnemy();
+            }
         }
+        //if (currentEnemies = maxEnemies) 
+        //{
+        //    SpawnEnemy();
+        //}
     }
 }

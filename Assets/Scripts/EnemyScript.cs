@@ -13,12 +13,13 @@ public class EnemyScript : MonoBehaviour
     private Transform player;
     private float timeLastAttacked;
     private bool isDead;
-    public EnemySpawn spawn;
+    private EnemySpawn spawn;
 
     // Use this for initialization
     void Start()
     {
-        
+        spawn = GameObject.FindGameObjectWithTag("EnemySpawn").GetComponent<EnemySpawn>();
+        //spawn = GetComponent<EnemySpawn>();
         isDead = false;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -65,13 +66,15 @@ public class EnemyScript : MonoBehaviour
         health -= amount;
         if (health < 0)
         {
-            Die();
-            spawn.currentEnemies--;
+            
+            Die();      
         }
     }
 
     public void Die()
     {
         Destroy(gameObject);
+        spawn.EnemyKilled();
+        //spawn.currentEnemies--;
     }
 }
